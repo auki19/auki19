@@ -1,0 +1,37 @@
+
+html {
+    
+    position: absolute;
+}
+
+body {
+    position: absolute;
+    
+}
+
+iframe {
+    position: absolute; 
+    border: 0;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.head {
+    background-color: rgb(227, 200, 180);
+    width: 100%;
+}
