@@ -1,14 +1,4 @@
 
-html {
-    
-    position: absolute;
-}
-
-body {
-    position: absolute;
-    
-}
-
 iframe {
     position: absolute; 
     border: 0;
@@ -17,6 +7,18 @@ iframe {
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 h1 {
@@ -32,6 +34,41 @@ h3 {
 }
 
 .head {
-    background-color: rgb(227, 200, 180);
+    background-color: #b4d0e3;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
     width: 100%;
+    padding-left: 1px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.head2 {
+    background-color: #f3d5c9;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    padding-left: 1px;
+    font-size: 11px;
+
+}
+
+.inline {
+    display: inline;
+    float: left;
+    margin-right: 7px;
+}
+
+td {
+    padding: 0px;
+    margin: 0px;
+}
+
+summary {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+    font-weight: bold;
+    margin-left: 3px;
 }
