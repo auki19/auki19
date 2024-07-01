@@ -1,0 +1,147 @@
+html {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+iframe {
+    position: absolute; 
+    border: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.head {
+    background-color: #b4d0e3;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    padding-left: 1px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.head2 {
+    background-color: #f3d5c9;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    padding-left: 1px;
+    font-size: 11px;
+
+}
+
+.blogpost {
+    background-color: #f3d5c9;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 97.5%;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    font-size: 11px;
+
+}
+
+.inline {
+    display: inline;
+    float: left;
+    margin-right: 7px;
+}
+
+td {
+    padding: 0px;
+    margin: 0px;
+}
+
+summary {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+
+/* Tabs */
+.tab {
+    overflow: hidden;
+    background-color: #ffffff00;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom: #ffffff00;
+}
+
+.tab button {
+    background-image: url("../images/tab-inactive.png");
+    background-color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font: inherit;
+}
+
+.tab button:hover {
+    
+}
+
+.tab button.active {
+    background-image: url("../images/tab-active.png");
+}
+
+.tabcontent {
+    background-color: #DFB4E3;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-top: #ffffff00;
+    display: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
