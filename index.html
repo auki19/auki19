@@ -24,6 +24,9 @@
                     <div class="container">
                         <img style="width: 100%;" src="./images/badges/under_construction.gif">
                     </div>
+                    <div class="container" style="padding: 12px;">
+                        <p style="margin: 0px; padding: 0px;" id="lyric">A</p>
+                    </div>
                 </td>
                 <td class="spacetd"></td>
                 <td class="middletd">
@@ -101,5 +104,23 @@
                 </td>
             </tr>
         </table>
+
+        <script>
+            const lyrics = ['"Take all of your sympathy and leave it outside<br>\'cause there\'s no kind of loving that would make this alright"<br> <p style="text-align: right;">The Child Is Gone - Fiona Apple</p>', 
+            '"Early evening, the pink ring swallows<br>the spherical marigold terrain<br>Sleepily, Venus sinks and hollows<br>the stationed headlight of a plane"<br> <p style="text-align: right;">ingydar - Adrianne Lenker</p>',
+            '"One day I am gonna grow wings<br>A chemical reaction<br>Hysterical and useless"<br> <p style="text-align: right;">Let Down - Radiohead</p>',
+            '"No resolution, no circling dove<br>Still caught in the jaw of confusion"<br> <p style="text-align: right;">Century - Big Thief</p>',
+            '"He said \'it\'s all in your head\'<br>And I said \'So\'s everything,\' but he didn\'t get it"<br> <p style="text-align: right;">Paper Bag - Fiona Apple</p>',
+            '"Panic signs every single day<br>When your hands betray <br>No sense of sympathy<br>And you hold my hand every single day<br>But these days I fear the love in everything"<br> <p style="text-align: right;">puppy - glass beach</p>',
+            '"Mama here comes midnight with the dead moon in its jaws"<br> <p style="text-align: right;">Farewell Transmission - Songs: Ohia</p>',
+            '"Don\'t waste your pearls on me<br>I\'m only a pig"<br> <p style="text-align: right;">Turbines/Pigs - Black Country, New Road</p>',
+            '"Can\'t believe<br>How strange it is to be anything at all"<br> <p style="text-align: right;">In the Aeroplane Over the Sea - Neutral Milk Hotel</p>',
+            '"My certainty is wild, weaving<br>For you I am a child, believing<br>You lay beside me sleeping on a plane<br>In the future"<br> <p style="text-align: right;">Certainty - Big Thief</p>',
+            '"It\'ll take some time<br>But somewhere down the line<br>We won\'t be alone"<br> <p style="text-align: right;">My Boy (Twin Fantasy) - Car Seat Headrest</p>',
+            '"Hound dogs crowing at the stars above<br>Pigeons fall like snowflakes at the border<br>She kneels down and holds the frozen dove<br>The moon drips like water from her shoulder"<br> <p style="text-align: right;">Orange - Big Thief</p>',
+            '"I tried my hardest<br>But I\'d never learned<br>God\'s very simple and love shouldn\'t burn"<br> <p style="text-align: right;">Square - Mitski</p>'];
+            var i = Math.floor(Math.random() * lyrics.length);
+            document.getElementById("lyric").innerHTML = lyrics[i];
+        </script>
   </body>
 </html>
