@@ -37,6 +37,10 @@ a {
     color: var(--txtcolor-link);
 }
 
+a:visited {
+    color: var(--txtcolor-link);
+}
+
 b {
     color: var(--txtcolor-bold);
 }
@@ -45,9 +49,7 @@ i {
     color: var(--txtcolor-italics);
 }
 
-a:visited {
-    color: var(--txtcolor-link);
-}
+
 
 .hoverpoint:hover {
     cursor: pointer;
