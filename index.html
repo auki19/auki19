@@ -24,19 +24,22 @@
                     <div class="container">
                         <img style="width: 100%;" src="./images/badges/under_construction.gif">
                     </div>
-                    <div class="container" style="padding: 12px;">
+                    <div class="container-xsmall">
                         <p style="margin: 0px; padding: 0px;" id="lyric">A</p>
                     </div>
+                    <button style="padding: 6px;" onclick="changeBg()">
+                        Change Background
+                    </button>
                 </td>
                 <td class="spacetd"></td>
                 <td class="middletd">
                     <div class="container">
-                        <h2 class="h2-box" style="margin-top: 0px;">Welcome</h2>
-                        <p>Hello and welcome to my website! I'm <i>auki19</i>. This is where I like to agglomerate my various projects and hobbies into one big congealed & lovely mess. I'm mostly gonna use this to catalogue my interests. I wasn't old enough to be on the internet back in its early days, but I've grown to <b>love</b> the creativity that comes with creating your own website.</p>
+                        <h2 class="h2-box" style="margin-top: 0px;"><img src="./images/ui/h2char.gif" style="width: 18px;"> Welcome <img src="./images/ui/h2char.gif" style="width: 18px;"></h2>
+                        <p>Hello and welcome to my website! I'm <i>auki19</i>. This is where I like to agglomerate my various projects and hobbies into one big congealed & lovely mess. I'm mostly gonna use this to catalogue my interests. I wasn't old enough to be on the internet back in its early days, but I've grown to <b>love</b> the creativity that comes with custom websites.</p>
                         <h2 class="h2-box" style="margin-top: 0px;">Interests (hyperfixations)</h2>
                         <ul>
                             <li>
-                                Music - Fiona Apple, Big Thief/Adrianne Lenker, BCNR, glass beach, Mitski, Joni Mitchell, CSH
+                                Music - Mostly folk/singer-songwriter, alt-rock, and a little punk
                             </li>
                             <li>
                                 Playing piano & guitar
@@ -59,8 +62,19 @@
                                     <h2 class="h2-ol" style="margin-top: 0px;">Changelog</h2>
                                     <div class="container-inner" style="height: 250px;">
                                         <hr>
+                                        <p style="margin-bottom: 0px;">
+                                            <b>7.23.24</b> <br>
+                                        </p>
+                                            <ul style="margin: 0px; padding-left: 10px;">
+                                                <li>Added background change button</li>
+                                                <li>Added and rated more albums on music page</li>
+                                                <li>Added blur effect on containers against background</li>
+                                                <li>Updated about page</li>
+                                            </ul>
+                                        
+                                        <hr>
                                         <p>
-                                            <b>6.30.24</b> <br>
+                                            <b>7.01.24</b> <br>
                                             Hello World!
                                         </p>
                                         <hr>
@@ -85,17 +99,17 @@
                         <h2>Find Me Elsewhere</h2>
                         <a href="https://aukiq.tumblr.com">Tumblr</a>
                     </div>
-                    <div class="container">
+                    <div class="container-small">
                         <h2>&#127925; Now Playing</h2>
-                        <img style="width: 40px; float:left; margin-right: 10px;" src="./images/albums/whenthepawn.jpg">
-                        <p style="margin-bottom: 0px; margin-top: 18px;"><b>When the Pawn...</b> <br>Fiona Apple</p>
+                        <img style="width: 40px; float:left; margin-right: 10px;" src="./images/albums/helplessness.jpg">
+                        <p style="margin-bottom: 0px; margin-top: 18px;"><b>Helplessness Blues</b> <br>Fleet Foxes</p>
                     </div>
                     <div class="container">
                         <h2>Current Book</h2>
-                        <div><img width="90px" style="float: left; margin-right: 11px;" src="./images/books/houseofleaves.jpg"></div>
+                        <div><img width="90px" style="float: left; margin-right: 10px;" src="./images/books/houseofleaves.jpg"></div>
                         <p>
                             <br><br>
-                            <b>House of Leaves</b><br>
+                            <b><b style="color: rgb(58, 58, 238);">House</b> of Leaves</b><br>
                             Mark Z. Danielewski 
                             <br><br>
                         </p>
@@ -106,21 +120,41 @@
         </table>
 
         <script>
-            const lyrics = ['"Take all of your sympathy and leave it outside<br>\'cause there\'s no kind of loving that would make this alright"<br> <p style="text-align: right;">The Child Is Gone - Fiona Apple</p>', 
-            '"Early evening, the pink ring swallows<br>the spherical marigold terrain<br>Sleepily, Venus sinks and hollows<br>the stationed headlight of a plane"<br> <p style="text-align: right;">ingydar - Adrianne Lenker</p>',
-            '"One day I am gonna grow wings<br>A chemical reaction<br>Hysterical and useless"<br> <p style="text-align: right;">Let Down - Radiohead</p>',
-            '"No resolution, no circling dove<br>Still caught in the jaw of confusion"<br> <p style="text-align: right;">Century - Big Thief</p>',
-            '"He said \'it\'s all in your head\'<br>And I said \'So\'s everything,\' but he didn\'t get it"<br> <p style="text-align: right;">Paper Bag - Fiona Apple</p>',
-            '"Panic signs every single day<br>When your hands betray <br>No sense of sympathy<br>And you hold my hand every single day<br>But these days I fear the love in everything"<br> <p style="text-align: right;">puppy - glass beach</p>',
-            '"Mama here comes midnight with the dead moon in its jaws"<br> <p style="text-align: right;">Farewell Transmission - Songs: Ohia</p>',
-            '"Don\'t waste your pearls on me<br>I\'m only a pig"<br> <p style="text-align: right;">Turbines/Pigs - Black Country, New Road</p>',
-            '"Can\'t believe<br>How strange it is to be anything at all"<br> <p style="text-align: right;">In the Aeroplane Over the Sea - Neutral Milk Hotel</p>',
-            '"My certainty is wild, weaving<br>For you I am a child, believing<br>You lay beside me sleeping on a plane<br>In the future"<br> <p style="text-align: right;">Certainty - Big Thief</p>',
-            '"It\'ll take some time<br>But somewhere down the line<br>We won\'t be alone"<br> <p style="text-align: right;">My Boy (Twin Fantasy) - Car Seat Headrest</p>',
-            '"Hound dogs crowing at the stars above<br>Pigeons fall like snowflakes at the border<br>She kneels down and holds the frozen dove<br>The moon drips like water from her shoulder"<br> <p style="text-align: right;">Orange - Big Thief</p>',
-            '"I tried my hardest<br>But I\'d never learned<br>God\'s very simple and love shouldn\'t burn"<br> <p style="text-align: right;">Square - Mitski</p>'];
+            const lyrics = ['"Take all of your sympathy and leave it outside<br>\'cause there\'s no kind of loving that would make this alright"<br> <p style="text-align: right; margin-bottom: 0px;"><b>The Child Is Gone</b><br>Fiona Apple</p>', 
+            '"Early evening, the pink ring swallows<br>the spherical marigold terrain<br>Sleepily, Venus sinks and hollows<br>the stationed headlight of a plane"<br> <p style="text-align: right; margin-bottom: 0px;"><b>ingydar</b><br>Adrianne Lenker</p>',
+            '"One day I am gonna grow wings<br>A chemical reaction<br>Hysterical and useless"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Let Down</b><br>Radiohead</p>',
+            '"No resolution, no circling dove<br>Still caught in the jaw of confusion"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Century</b><br>Big Thief</p>',
+            '"He said \'it\'s all in your head\'<br>And I said \'So\'s everything,\' but he didn\'t get it"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Paper Bag</b><br>Fiona Apple</p>',
+            '"Panic signs every single day<br>When your hands betray <br>No sense of sympathy<br>And you hold my hand every single day<br>But these days I fear the love in everything"<br> <p style="text-align: right; margin-bottom: 0px;"><b>puppy</b><br>glass beach</p>',
+            '"Mama here comes midnight with the dead moon in its jaws"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Farewell Transmission</b><br>Songs: Ohia</p>',
+            '"Don\'t waste your pearls on me<br>I\'m only a pig"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Turbines/Pigs</b><br>Black Country, New Road</p>',
+            '"Can\'t believe<br>How strange it is to be anything at all"<br> <p style="text-align: right; margin-bottom: 0px;"><b>In the Aeroplane Over the Sea</b><br>Neutral Milk Hotel</p>',
+            '"My certainty is wild, weaving<br>For you I am a child, believing<br>You lay beside me sleeping on a plane<br>In the future"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Certainty</b><br>Big Thief</p>',
+            '"It\'ll take some time<br>But somewhere down the line<br>We won\'t be alone"<br> <p style="text-align: right; margin-bottom: 0px;"><b>My Boy (Twin Fantasy)</b><br>Car Seat Headrest</p>',
+            '"Hound dogs crowing at the stars above<br>Pigeons fall like snowflakes at the border<br>She kneels down and holds the frozen dove<br>The moon drips like water from her shoulder"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Orange</b><br>Big Thief</p>',
+            '"I tried my hardest<br>But I\'d never learned<br>God\'s very simple and love shouldn\'t burn"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Square</b><br>Mitski</p>',
+            '"Nothing\'s gonna change my world"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Across the Universe</b><br>The Beatles</b></p>',
+            '"Non sum qualis eram"<br> <p style="text-align: right; margin-bottom: 0px;"><b>House of Leaves</b><br>Mark Z. Danielewski</p>',];
             var i = Math.floor(Math.random() * lyrics.length);
             document.getElementById("lyric").innerHTML = lyrics[i];
+
+            const bgUrls = ['url(./images/photos/IMG_0011.JPEG)', 'url(./images/photos/IMG_0242.JPEG)', 'url(./images/photos/IMG_3113.JPEG)', 'url(./images/photos/IMG_3123.JPEG)'];
+            var k;
+            if (localStorage.getItem("k") === null) {
+                k = 0;
+            } else {
+                k = Number(localStorage.getItem("k"));
+            }
+            document.body.style.backgroundImage = bgUrls[localStorage.getItem("k")];
+            function changeBg () {
+                if (k + 1 < bgUrls.length) {
+                    k++;
+                } else {
+                    k = 0;
+                }
+                document.body.style.backgroundImage = bgUrls[k];
+                localStorage.setItem("k", JSON.stringify(k));
+            }
         </script>
   </body>
 </html>

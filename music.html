@@ -11,7 +11,7 @@
 
         <table class="main">
             <tr>
-                <td class="lefttd">
+                <td class="lefttd" style="width:150px;">
                     <div class="container">
                         <h2 class="h2-ul" style="margin-top: 0px;">Navigation</h2>
                         <a href="index.html">&#8226;&nbsp;&nbsp;Home</a> <br>
@@ -24,11 +24,15 @@
                     <div class="container">
                         <img style="width: 100%;" src="./images/badges/under_construction.gif">
                     </div>
+                    <button class="nohover" style="padding: 6px;" onclick="changeBg()">
+                        Change Background
+                    </button>
                 </td>
                 <td class="spacetd"></td>
                 <td class="middletd">
-                    <div class="container">
+                    <div class="nohover">
                         <h2 class="h2-box">My Music Catalogue</h2>
+                        <p>Click on a table header to sort by that category.</p>
                         <table class="musictable" id="myTable2">
                             <tr>
                                 <td class="tableheader">Art</td>
@@ -39,7 +43,7 @@
                                 <td class="tableheader">Thoughts</td>
                                 <td class="tableheader hoverpoint" onclick="sortTable(6)">Owned on</td>
                             </tr>
-                            <tr>
+                            <tr id="tidal">
                                 <td width="60px"><img src="./images/albums/tidal.png"></td>
                                 <td style="vertical-align: middle;">Tidal</td>
                                 <td>Fiona Apple</td>
@@ -48,7 +52,7 @@
                                 <td style="text-align: justify;">An incredible debut album from one of the greatest artists of all time IMO. It's unbelievable to me that she released such a classic at only 18 years old, already having mastered songwriting with a level of depth and maturity that most don't reach at all within their lifetimes. <br> <b>Favorite Tracks:</b> Shadowboxer, Slow Like Honey, The Child Is Gone</td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="whenthepawn">
                                 <td width="60px"><img src="./images/albums/whenthepawn.jpg"></td>
                                 <td style="vertical-align: middle;">When The Pawn...</td>
                                 <td>Fiona Apple</td>
@@ -57,7 +61,7 @@
                                 <td style="text-align: justify;">One of my favorites of all time for sure. Every song on this album hits so incredibly hard one way or another, and it pretty much perfectly encapsulates my music taste. Fiona's songwriting is impeccable as always, and Jon Brion's theatrical production elevates it to a legendary album that I constantly find myself coming back to. <br><b>Favorite Tracks:</b> All of them</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="extraordinarymachine">
                                 <td width="60px"><img src="./images/albums/extraordinarymachine.jpg"></td>
                                 <td style="vertical-align: middle;">Extraordinary Machine</td>
                                 <td>Fiona Apple</td>
@@ -66,7 +70,7 @@
                                 <td style="text-align: justify;">A very solid and extraordinarily fun album. Not much to say about it. The individual tracks are all awesome on their own, but looking at the album as a whole it feels a little bit lacking in comparison with her previous album, hence the docking of a couple points. <br><b>Favorite Tracks:</b> Extraordinary Machine, Get Him Back, Better Version of Me, Tymps, Oh Well, Not About Love, Waltz (Better Than Fine)</td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="theidlerwheel">
                                 <td width="60px"><img src="./images/albums/theidlerwheel.jpg"></td>
                                 <td style="vertical-align: middle;">The Idler Wheel...</td>
                                 <td>Fiona Apple</td>
@@ -75,7 +79,7 @@
                                 <td style="text-align: justify;">This album marks a shift in Fiona's discography from bold heavy-hitting theatrics to more stripped-back and percussive tracks with a much larger focus on songwriting. The lack of theatrical production does nothing to impact the intensity conveyed by the album (although I do miss the fun of it somewhat!)--her songwriting and vocal performances have evolved to the point that she simply doesn't need it anymore. I'd say The Idler Wheel fully cemented her place as a legendary figure in modern music. <br><b>Favorite Tracks:</b> Every Single Night, Daredevil, Jonathan, Left Alone, Anything We Want, Hot Knife, Largo</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="fetchtheboltcutters">
                                 <td width="60px"><img src="./images/albums/fetchtheboltcutters.jpg"></td>
                                 <td style="vertical-align: middle;">Fetch The Bolt Cutters</td>
                                 <td>Fiona Apple</td>
@@ -84,7 +88,7 @@
                                 <td style="text-align: justify;">A wonderfully experimental album that builds off the direction Fiona went in with The Idler Wheel. Many of the songs on this album don't feature piano at all, unlike her previous albums, but rather focus on unconventional percussion and vocals. It took a bit to get used to, but it really grew on me and I'd consider it one of Fiona's best. <br><b>Favorite Tracks:</b> I Want You To Love Me, Shameika, Relay, Rack of His, Newspaper, Ladies, Cosmonauts, On I Go</td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="masterpiece">
                                 <td width="60px"><img src="./images/albums/masterpiece.jpg"></td>
                                 <td style="vertical-align: middle;">Masterpiece</td>
                                 <td>Big Thief</td>
@@ -93,7 +97,7 @@
                                 <td style="text-align: justify;">A strong debut garage-rock album. Adrianne's beautiful songwriting and knack for catchy melodies make Masterpiece a pleasure to listen through. "Vegas" is slightly boring to me, and "Interstate" & "Parallels" feel a bit underdeveloped, but otherwise it's a very enjoyable album. <br><b>Favorite Tracks:</b> Masterpiece, Real Love, Paul, Humans, Randy</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="capacity">
                                 <td width="60px"><img src="./images/albums/capacity.jpg"></td>
                                 <td style="vertical-align: middle;">Capacity</td>
                                 <td>Big Thief</td>
@@ -102,7 +106,7 @@
                                 <td style="text-align: justify;">A very good follow-up to their debut. The instrumentals are much less heavy on this one, with more ethereal vocals set over smooth guitar tones and relaxed percussion. I still find a few tracks like "Coma" and "Black Diamonds" a little underdeveloped, but it's overall a very pretty-sounding album that clicks together with Adrianne's songwriting nicely. <br><b>Favorite Tracks:</b> Shark Smile, Watering, Great White Shark, Objects, Haley</td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="ufof">
                                 <td width="60px"><img src="./images/albums/ufof.jpg"></td>
                                 <td style="vertical-align: middle;">U.F.O.F.</td>
                                 <td>Big Thief</td>
@@ -111,7 +115,7 @@
                                 <td style="text-align: justify;">A beautifully produced indie folk album with light vocals and celestial guitar instrumentation. Adrianne's songwriting takes a more abstract direction, with beautiful and oftentimes harrowingly evocative imagery. The track "Jenni" is somewhat repetitive and doesn't fit very well on the album, but everything else about it is magical. <br><b>Favorite Tracks:</b> UFOF, Cattails, Open Desert, Orange, Century, Magic Dealer</td></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="twohands">
                                 <td width="60px"><img src="./images/albums/twohands.png"></td>
                                 <td style="vertical-align: middle;">Two Hands</td>
                                 <td>Big Thief</td>
@@ -120,16 +124,16 @@
                                 <td style="text-align: justify;">A more grounded and acoustic sister album to UFOF. "The Toy", "Those Girls", and "Cut My Hair" have sort-of unconventional vocals and production, and I personally enjoy it even if I find it a little strange. The album as a whole is a very nice listen. <br><b>Favorite Tracks:</b> Forgotten Eyes, Two Hands, Shoulders, Not, Replaced</td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="dragonnewwarmmountain">
                                 <td width="60px"><img src="./images/albums/dragonnewwarmmountain.png"></td>
                                 <td style="vertical-align: middle;">Dragon New Warm Mountain I Believe In You</td>
                                 <td>Big Thief</td>
                                 <td>2022</td>
                                 <td>10/10</td>
-                                <td style="text-align: justify;">My favorite folk album ever. Big Thief draws influences from country, bluegrass, Americana, and even trip-hop, trap, and psychadelic music throughout this sprawling 20-track album with songwriting that beautifully captures the full range of human emotion. Adrianne's vocals match the instrumentation perfectly as well. It's silly, heartbreaking, ethereal, intimate, strange, and filled to the brim with pure joy. <br><b>Favorite Tracks:</b> Time Escaping, Spud Infinity, Certainty, Dragon New Warm Mountain I Believe In You, Sparrow, Blurred View, Red Moon, No Reason, Simulation Swarm, Love Love Love, Blue Lightning</td>
+                                <td style="text-align: justify;">My favorite folk album ever. Big Thief draws influences from country, bluegrass, Americana, and even trip-hop, trap, shoegaze, and psychadelic music throughout this sprawling 20-track album with songwriting that beautifully captures everything it means to be human. Adrianne's vocals match the instrumentation perfectly as well. It's silly, heartbreaking, ethereal, intimate, strange, and filled to the brim with pure joy. <br><b>Favorite Tracks:</b> Time Escaping, Spud Infinity, Certainty, Dragon New Warm Mountain I Believe In You, Sparrow, Blurred View, Red Moon, No Reason, Simulation Swarm, Love Love Love, Blue Lightning</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="hourswerethebirds">
                                 <td width="60px"><img src="./images/albums/hourswerethebirds.jpg"></td>
                                 <td style="vertical-align: middle;">Hours Were the Birds</td>
                                 <td>Adrianne Lenker</td>
@@ -138,7 +142,7 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="asides">
                                 <td width="60px"><img src="./images/albums/asides.webp"></td>
                                 <td style="vertical-align: middle;">a-sides and besides</td>
                                 <td>Adrianne Lenker</td>
@@ -147,70 +151,80 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="abysskiss">
                                 <td width="60px"><img src="./images/albums/abysskiss.webp"></td>
                                 <td style="vertical-align: middle;">abysskiss</td>
                                 <td>Adrianne Lenker</td>
                                 <td>2018</td>
                                 <td>06/10</td>
-                                <td style="text-align: justify;"></td>
+                                <td style="text-align: justify;">i'm conflicted about this one. adrianne's songwriting is nice, but the album as a whole feels more like a very-polished collection of demos than a set of complete songs. i might have to give it a few more tries. <br><b>favorite tracks:</b> symbol, blue and red horses</td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="songs">
                                 <td width="60px"><img src="./images/albums/songs.webp"></td>
                                 <td style="vertical-align: middle;">songs</td>
                                 <td>Adrianne Lenker</td>
                                 <td>2020</td>
                                 <td>09/10</td>
-                                <td style="text-align: justify;"></td>
+                                <td style="text-align: justify;">mwah mwah mwah beautiful. i don't really know what to say about this album other than that it feels both completely otherworldly/angelic and incredibly intimate/familiar. the lyrics and instrumentation are so evocative in a way i can't put into words. <br><b>favorite tracks:</b> two reverse, ingydar, anything, forwards beckon rebound, heavy focus, dragon eyes</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="iwontletgo">
+                                <td width="60px"><img src="./images/albums/iwontletgo.jpeg"></td>
+                                <td style="vertical-align: middle;">i won't let go of your hand</td>
+                                <td>Adrianne Lenker</td>
+                                <td>2024</td>
+                                <td>07/10</td>
+                                <td style="text-align: justify;">a beautiful set of voice-memo demos. this album is only available thru <a href="https://adriannelenker.bandcamp.com/album/i-won-t-let-go-of-your-hand">purchase on Bandcamp</a>, and the proceeds go to the PCRF so I really encourage buying it. <br><b>favorite tracks:</b> the music, fangs lungs ankles, i won't let go of your hand, someone to</td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="brightfuture">
                                 <td width="60px"><img src="./images/albums/brightfuture.webp"></td>
                                 <td style="vertical-align: middle;">Bright Future</td>
                                 <td>Adrianne Lenker</td>
                                 <td>2024</td>
                                 <td>09/10</td>
-                                <td style="text-align: justify;"></td>
+                                <td style="text-align: justify;">Adrianne is a legendary songwriter and lyricist, and this album makes that abundantly clear. While her previous was much more atmospheric and abstract, Bright Future is direct and soul-baring in its lyrics. I personally prefer the previous album's style, but Bright Future is still a wonderful set of songs. <br><b>Favorite Tracks:</b> Sadness as a Gift, Fool, Free Treasure (the most beautiful love song I've ever heard), Evol, Already Lost, Donut Seam, Once a Bunch</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            
+                            <tr id="tfgba">
                                 <td width="60px"><img src="./images/albums/tfgba.jpg"></td>
                                 <td style="vertical-align: middle;">the first glass beach album</td>
                                 <td>glass beach</td>
                                 <td>2019</td>
                                 <td>07/10</td>
-                                <td style="text-align: justify;"></td>
+                                <td style="text-align: justify;">a bit inconsistent at times, but very ambitious and fun. if jeff rosenstock was a gay indietronica artist basically<br><b>favorite tracks:</b> classic j dies and goes to hell part 1, bedroom community, bone skull, glass beach, yoshi's island, orchids</b></td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="plasticdeath">
                                 <td width="60px"><img src="./images/albums/plasticdeath.jpg"></td>
                                 <td style="vertical-align: middle;">plastic death</td>
                                 <td>glass beach</td>
                                 <td>2024</td>
-                                <td>09/10</td>
+                                <td>08/10</td>
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="lush">
                                 <td width="60px"><img src="./images/albums/lush.jpg"></td>
                                 <td style="vertical-align: middle;">LUSH</td>
                                 <td>Mitski</td>
                                 <td>2012</td>
-                                <td>08/10</td>
+                                <td>07/10</td>
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="rfsncib">
                                 <td width="60px"><img src="./images/albums/rfsncib.jpg"></td>
                                 <td style="vertical-align: middle;">Retired from Sad, New Career in Business</td>
                                 <td>Mitski</td>
                                 <td>2013</td>
-                                <td>08/10</td>
+                                <td>07/10</td>
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="burymeatmakeoutcreek">
                                 <td width="60px"><img src="./images/albums/burymeatmakeoutcreek.jpg"></td>
                                 <td style="vertical-align: middle;">Bury Me At Makeout Creek</td>
                                 <td>Mitski</td>
@@ -219,7 +233,7 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="puberty2">
                                 <td width="60px"><img src="./images/albums/puberty2.jpg"></td>
                                 <td style="vertical-align: middle;">Puberty 2</td>
                                 <td>Mitski</td>
@@ -228,16 +242,16 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="bethecowboy">
                                 <td width="60px"><img src="./images/albums/bethecowboy.jpg"></td>
                                 <td style="vertical-align: middle;">Be The Cowboy</td>
                                 <td>Mitski</td>
                                 <td>2018</td>
-                                <td>09/10</td>
+                                <td>08/10</td>
                                 <td style="text-align: justify;"></td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="laurelhell">
                                 <td width="60px"><img src="./images/albums/laurelhell.png"></td>
                                 <td style="vertical-align: middle;">Laurel Hell</td>
                                 <td>Mitski</td>
@@ -246,52 +260,61 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="theland">
                                 <td width="60px"><img src="./images/albums/theland.jpg"></td>
                                 <td style="vertical-align: middle;">The Land Is Inhospitable and So Are We</td>
                                 <td>Mitski</td>
                                 <td>2023</td>
-                                <td>09/10</td>
+                                <td>08/10</td>
                                 <td style="text-align: justify;"></td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="diamondjubilee">
+                                <td width="60px"><img src="./images/albums/diamondjubilee.webp"></td>
+                                <td style="vertical-align: middle;">Diamond Jubilee</td>
+                                <td>Cindy Lee</td>
+                                <td>2024</td>
+                                <td>08/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="eial">
                                 <td width="60px"><img src="./images/albums/eial.jpg"></td>
                                 <td style="vertical-align: middle;">Everything Is A Lot</td>
                                 <td>Will Wood And The Tapeworms</td>
                                 <td>2015</td>
-                                <td>08/10</td>
-                                <td style="text-align: justify;"></td>
+                                <td>07/10</td>
+                                <td style="text-align: justify;">Will is genuinely an incredible lyricist and piano player and I think that shines through the most in this album, with it's generally-more-stripped-back approach in comparison with his others. In my opinion Will doesn't do theatricality as well as other comparable artists (BCNR, Fiona Apple, Tom Waits, etc) because he leans too much into a pop direction with his songwriting. His more mellow singer-songwriter piano driven tracks here are so beautifully done, and I wish that was the direction he took moving out of his debut. Some of the theatrical ones are still very fun though. <br><b>Favorite Tracks:</b> 6up 5oh Cop-Out; Skeleton Appreciation Day; Aikido (Neurotic / Erotic); White Knuckle Jerk; Red Moon; Lysergide Daydream; Jimmy Mushrooms' Last Drink</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="SELF-iSH">
                                 <td width="60px"><img src="./images/albums/self-ish.jpg"></td>
                                 <td style="vertical-align: middle;">SELF-iSH</td>
                                 <td>Will Wood And The Tapeworms</td>
                                 <td>2016</td>
-                                <td>07/10</td>
+                                <td>06/10</td>
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="tna">
                                 <td width="60px"><img src="./images/albums/tna.jpg"></td>
                                 <td style="vertical-align: middle;">The Normal Album</td>
                                 <td>Will Wood</td>
                                 <td>2020</td>
-                                <td>08/10</td>
+                                <td>06/10</td>
                                 <td style="text-align: justify;"></td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="icimi">
                                 <td width="60px"><img src="./images/albums/icimi.jpg"></td>
-                                <td style="vertical-align: middle;">Everything Is A Lot</td>
+                                <td style="vertical-align: middle;">"In case I make it,"</td>
                                 <td>Will Wood</td>
                                 <td>2022</td>
-                                <td>07/10</td>
-                                <td style="text-align: justify;"></td>
+                                <td>06/10</td>
+                                <td style="text-align: justify;">I've always loved Will's more mellow songs, and this album has some of his best. But there are a few too many tracks that feel like filler (BFB's, You Liked This) or just self-indulgently ironic/insincere (Sex, Drugs, Rock 'n' Roll; The Main Character (as much as I like the song)) to rank it as high as EIAL.<br><b>Favorite Tracks:</b> Tomcat Disposables; Euthanasia; Falling Up; That's Enough, Let's Get You Home; Um, It's Kind Of A Lot; Against The Kitchen Floor</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="forthefirsttime">
                                 <td width="60px"><img src="./images/albums/forthefirsttime.webp"></td>
                                 <td style="vertical-align: middle;">For the first time</td>
                                 <td>Black Country, New Road</td>
@@ -300,7 +323,7 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="antsfromupthere">
                                 <td width="60px"><img src="./images/albums/antsfromupthere.webp"></td>
                                 <td style="vertical-align: middle;">Ants From Up There</td>
                                 <td>Black Country, New Road</td>
@@ -309,7 +332,7 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
-                            <tr>
+                            <tr id="liveatbushhall">
                                 <td width="60px"><img src="./images/albums/liveatbushhall.jpg"></td>
                                 <td style="vertical-align: middle;">Live At Bush Hall</td>
                                 <td>Black Country, New Road</td>
@@ -318,16 +341,16 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="okcomputer">
                                 <td width="60px"><img src="./images/albums/okcomputer.png"></td>
                                 <td style="vertical-align: middle;">OK Computer</td>
                                 <td>Radiohead</td>
                                 <td>1997</td>
-                                <td>10/10</td>
-                                <td style="text-align: justify;"></td>
+                                <td>09/10</td>
+                                <td style="text-align: justify;">Enough has already been said about this album. I wanna give it a 10 so badly, but to be honest I'm just not a big fan of "Climbing Up The Walls" or "The Tourist" and I don't think I can give a ten to an album if there are songs I don't like on it. It sucks because they're not bad songs in the slightest, they just don't appeal to me personally. It's otherwise a perfect album. <br><b>Favorite Tracks:</b> Airbag, Paranoid Android, Subterranean Homesick Alien, Let Down, Electioneering, No Surprises</td>
                                 <td>Vinyl</td>
                             </tr>
-                            <tr>
+                            <tr id="inrainbows">
                                 <td width="60px"><img src="./images/albums/Inrainbows.png"></td>
                                 <td style="vertical-align: middle;">In Rainbows</td>
                                 <td>Radiohead</td>
@@ -336,6 +359,70 @@
                                 <td style="text-align: justify;"></td>
                                 <td>Digital</td>
                             </tr>
+                            <tr id="magnolia">
+                                <td width="60px"><img src="./images/albums/magnolia.jpeg"></td>
+                                <td style="vertical-align: middle;">Magnolia Electric Co.</td>
+                                <td>Songs: Ohia</td>
+                                <td>2003</td>
+                                <td>08/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="aeroplane">
+                                <td width="60px"><img src="./images/albums/aeroplane.jpeg"></td>
+                                <td style="vertical-align: middle;">In the Aeroplane Over the Sea</td>
+                                <td>Neutral Milk Hotel</td>
+                                <td>1998</td>
+                                <td>09/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="twicearoundthesun">
+                                <td width="60px"><img src="./images/albums/twicearoundthesun.jpeg"></td>
+                                <td style="vertical-align: middle;">Twice Around the Sun</td>
+                                <td>Ugly</td>
+                                <td>2024</td>
+                                <td>07/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="helplessness">
+                                <td width="60px"><img src="./images/albums/helplessness.jpg"></td>
+                                <td style="vertical-align: middle;">Helplessness Blues</td>
+                                <td>Fleet Foxes</td>
+                                <td>2011</td>
+                                <td>09/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="helplessness">
+                                <td width="60px"><img src="./images/albums/hotellarut.jpg"></td>
+                                <td style="vertical-align: middle;">Hotel La Rut</td>
+                                <td>Joanna Wang</td>
+                                <td>2024</td>
+                                <td>08/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="blue">
+                                <td width="60px"><img src="./images/albums/blue.jpg"></td>
+                                <td style="vertical-align: middle;">Blue</td>
+                                <td>Joni Mitchell</td>
+                                <td>1975</td>
+                                <td>08/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="blue">
+                                <td width="60px"><img src="./images/albums/hejira.jpg"></td>
+                                <td style="vertical-align: middle;">Hejira</td>
+                                <td>Joni Mitchell</td>
+                                <td>1976</td>
+                                <td>09/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+
                         </table>
                     </div>
                     
@@ -398,6 +485,24 @@
                   }
                 }
               }
+            }
+
+            const bgUrls = ['url(./images/photos/IMG_0011.JPEG)', 'url(./images/photos/IMG_0242.JPEG)', 'url(./images/photos/IMG_3113.JPEG)', 'url(./images/photos/IMG_3123.JPEG)'];
+            var k;
+            if (localStorage.getItem("k") === null) {
+                k = 0;
+            } else {
+                k = Number(localStorage.getItem("k"));
+            }
+            document.body.style.backgroundImage = bgUrls[localStorage.getItem("k")];
+            function changeBg () {
+                if (k + 1 < bgUrls.length) {
+                    k++;
+                } else {
+                    k = 0;
+                }
+                document.body.style.backgroundImage = bgUrls[k];
+                localStorage.setItem("k", JSON.stringify(k));
             }
         </script>
   </body>
