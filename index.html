@@ -26,16 +26,40 @@
                     </div>
                     <div class="container-xsmall">
                         <p style="margin: 0px; padding: 0px;" id="lyric">A</p>
+                        <div class="shuffle" onclick="changeQuote()"></div>
                     </div>
-                    <button style="padding: 6px;" onclick="changeBg()">
-                        Change Background
-                    </button>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="padding: 6px;" onclick="changeBg()">
+                                    Change Background
+                                </button>
+                            </td>
+                            <td class="spacetd"></td>
+                            <td>
+                                <button style="padding: 6px;" onclick="toggleTheme()">
+                                    Toggle Dark Mode
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    
                 </td>
                 <td class="spacetd"></td>
                 <td class="middletd">
                     <div class="container">
                         <h2 class="h2-box" style="margin-top: 0px;"><img src="./images/ui/h2char.gif" style="width: 18px;"> Welcome <img src="./images/ui/h2char.gif" style="width: 18px;"></h2>
-                        <p>Hello and welcome to my website! I'm <i>auki19</i>. This is where I like to agglomerate my various projects and hobbies into one big congealed & lovely mess. I'm mostly gonna use this to catalogue my interests. I wasn't old enough to be on the internet back in its early days, but I've grown to <b>love</b> the creativity that comes with custom websites.</p>
+                        <p>Hello and welcome to my website! I'm <i>auki19</i>. This is where I like to agglomerate my various projects and hobbies into one big congealed & lovely mess. I'm mostly gonna use this to catalogue my interests. I wasn't old enough to be on the internet back in its early days, but I've grown to <b>love</b> the creativity that comes with custom websites. If you know me irl no you don't.</p>
+                        <marquee scrolldelay="225">
+                            <img class="blinkie" src="./images/badges/blinkies/d1.webp">
+                        <img class="blinkie" src="./images/badges/blinkies/d2.webp">
+                        <img class="blinkie" src="./images/badges/blinkies/d3.webp">
+                        <img class="blinkie" src="./images/badges/blinkies/d4.webp">
+                        <img class="blinkie" src="./images/badges/blinkies/d5.webp">
+                        <img class="blinkie" src="./images/badges/blinkies/d6.webp">
+                        </marquee>
+                        
                         <h2 class="h2-box" style="margin-top: 0px;">Interests (hyperfixations)</h2>
                         <ul>
                             <li>
@@ -63,15 +87,25 @@
                                     <div class="container-inner" style="height: 250px;">
                                         <hr>
                                         <p style="margin-bottom: 0px;">
+                                            <b>7.29.24</b> <br>
+                                        </p>
+                                        <ul style="margin: 0px; padding-left: 10px;">
+                                            <li>Added dark theme</li>
+                                            <li>Added and rated more albums on music page</li>
+                                            <li>Collapsing "Thoughts" sections on music page for less scrolling</li>
+                                            <li>Added blinkies above</li>
+                                            <li>Updated about page</li>
+                                        </ul>
+                                        <hr>
+                                        <p style="margin-bottom: 0px;">
                                             <b>7.23.24</b> <br>
                                         </p>
-                                            <ul style="margin: 0px; padding-left: 10px;">
-                                                <li>Added background change button</li>
-                                                <li>Added and rated more albums on music page</li>
-                                                <li>Added blur effect on containers against background</li>
-                                                <li>Updated about page</li>
-                                            </ul>
-                                        
+                                        <ul style="margin: 0px; padding-left: 10px;">
+                                            <li>Added background change button</li>
+                                            <li>Added and rated more albums on music page</li>
+                                            <li>Added blur effect on containers against background</li>
+                                            <li>Updated about page</li>
+                                        </ul>
                                         <hr>
                                         <p>
                                             <b>7.01.24</b> <br>
@@ -120,7 +154,7 @@
         </table>
 
         <script>
-            const lyrics = ['"Take all of your sympathy and leave it outside<br>\'cause there\'s no kind of loving that would make this alright"<br> <p style="text-align: right; margin-bottom: 0px;"><b>The Child Is Gone</b><br>Fiona Apple</p>', 
+            const quotes = ['"Take all of your sympathy and leave it outside<br>\'cause there\'s no kind of loving that would make this alright"<br> <p style="text-align: right; margin-bottom: 0px;"><b>The Child Is Gone</b><br>Fiona Apple</p>', 
             '"Early evening, the pink ring swallows<br>the spherical marigold terrain<br>Sleepily, Venus sinks and hollows<br>the stationed headlight of a plane"<br> <p style="text-align: right; margin-bottom: 0px;"><b>ingydar</b><br>Adrianne Lenker</p>',
             '"One day I am gonna grow wings<br>A chemical reaction<br>Hysterical and useless"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Let Down</b><br>Radiohead</p>',
             '"No resolution, no circling dove<br>Still caught in the jaw of confusion"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Century</b><br>Big Thief</p>',
@@ -134,9 +168,16 @@
             '"Hound dogs crowing at the stars above<br>Pigeons fall like snowflakes at the border<br>She kneels down and holds the frozen dove<br>The moon drips like water from her shoulder"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Orange</b><br>Big Thief</p>',
             '"I tried my hardest<br>But I\'d never learned<br>God\'s very simple and love shouldn\'t burn"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Square</b><br>Mitski</p>',
             '"Nothing\'s gonna change my world"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Across the Universe</b><br>The Beatles</b></p>',
-            '"Non sum qualis eram"<br> <p style="text-align: right; margin-bottom: 0px;"><b><b style="color: rgb(58, 58, 238);">House</b> of Leaves</b><br>Mark Z. Danielewski</p>',];
-            var i = Math.floor(Math.random() * lyrics.length);
-            document.getElementById("lyric").innerHTML = lyrics[i];
+            '"Non sum qualis eram"<br> <p style="text-align: right; margin-bottom: 0px;"><b><b style="color: rgb(58, 58, 238);">House</b> of Leaves</b><br>Mark Z. Danielewski</p>',
+            '"Nothing looks that real to me<br>I only see in two or three colors"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Randy</b><br>Big Thief</p>',
+            '"What\'s it like to breathe in?<br>Find a friend and gather within<br>I am a wolf in a city of women<br>You only know the light is on"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Randy</b><br>Big Thief</p>'];
+            var i = Math.floor(Math.random() * quotes.length);
+            document.getElementById("lyric").innerHTML = quotes[i];
+
+            function changeQuote () {
+                i = Math.floor(Math.random() * quotes.length);
+                document.getElementById("lyric").innerHTML = quotes[i];
+            }
 
             const bgUrls = ['url(./images/photos/IMG_0011.JPEG)', 'url(./images/photos/IMG_0242.JPEG)', 'url(./images/photos/IMG_3113.JPEG)', 'url(./images/photos/IMG_3123.JPEG)'];
             var k;
@@ -155,6 +196,30 @@
                 document.body.style.backgroundImage = bgUrls[k];
                 localStorage.setItem("k", JSON.stringify(k));
             }
+
+
+            if (window.localStorage.getItem('theme') == 'dark') {
+                setTheme('./css/dark.css');
+            } else {
+                setTheme('./css/style.css');
+            }
+
+            function toggleTheme() {
+                if (window.localStorage.getItem('theme') == 'default') {
+                    setTheme('./css/dark.css');
+                    window.localStorage.setItem('theme', 'dark');
+                } else {
+                    setTheme('./css/style.css');
+                    window.localStorage.setItem('theme', 'default');
+                }
+            }
+
+            function setTheme(x) {
+                var get = document.getElementById('logo');
+                var theme = document.getElementsByTagName('link')[0];
+                theme.setAttribute('href', x);
+            }
+
         </script>
   </body>
 </html>

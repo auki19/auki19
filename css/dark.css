@@ -1,16 +1,16 @@
 :root {
-    --green: #b4dac3;
-    --green-transparent: #b4dac3da;
-    --txtcolor: #1b5e4d;
-    --txtcolor-hover: #001812;
-    --txtcolor-bold: #008fa1;
-    --txtcolor-bold-hover: #91e8f3;
-    --txtcolor-bold-1: #aa5889;
-    --txtcolor-bold-1-hover: #eeabd3;
-    --txtcolor-bold-2: #7357a0;
-    --txtcolor-bold-2-hover: #c2a8eb;
-    --txtcolor-italics: #b43481;
-    --txtcolor-link: #515aaf;
+    --green: #4e6959;
+    --green-transparent: #435e4ecc;
+    --txtcolor: #cff7ed;
+    --txtcolor-hover: #ffffff;
+    --txtcolor-bold: #91e8f3;
+    --txtcolor-bold-hover: #008fa1;
+    --txtcolor-bold-1: #eeabd3;
+    --txtcolor-bold-1-hover: #aa5889;
+    --txtcolor-bold-2: #c2a8eb;
+    --txtcolor-bold-2-hover: #7357a0;
+    --txtcolor-italics: #ff7ccb;
+    --txtcolor-link: #a7b1ff;
     --pink: #DAB4CB;
     --purple: #B4B8DA;
     --beige: #fffad1;
@@ -301,7 +301,7 @@ hr {
     width: 100%;
     border: var(--txtcolor) 3px double;
     border-radius: 6px;
-    padding: 9px;
+    padding: 12px;
     background-color: var(--green-transparent);
     backdrop-filter: blur(8px);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.336);
@@ -311,7 +311,7 @@ hr {
 
 .container-xsmall:hover {
     border: var(--txtcolor) 4px double;
-    padding: 8px;
+    padding: 11px;
 }
 
 .nohover {
@@ -413,7 +413,6 @@ details[open] summary {
     border: var(--txtcolor-hover) 3px solid;
     color: var(--txtcolor-hover);
 }
-
 
 details[open] summary:hover {
     border: var(--txtcolor-hover) 3px solid;
