@@ -301,7 +301,7 @@ hr {
     width: 100%;
     border: var(--txtcolor) 3px double;
     border-radius: 6px;
-    padding: 12px;
+    padding: 9px;
     background-color: var(--green-transparent);
     backdrop-filter: blur(8px);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.336);
@@ -311,7 +311,7 @@ hr {
 
 .container-xsmall:hover {
     border: var(--txtcolor) 4px double;
-    padding: 11px;
+    padding: 8px;
 }
 
 .nohover {
@@ -361,6 +361,17 @@ button {
     color: var(--txtcolor);
 }
 
+.button-small {
+    width: auto;
+    padding: 8px;
+}
+
+.button-link {
+    width: auto;
+    padding: 2px;
+    margin: auto;
+}
+
 button:hover {
     cursor: url('../images/ui/pinkpointer.png'), pointer;
     background-color: var(--txtcolor);
@@ -371,12 +382,12 @@ button:hover {
 
 .shuffle {
     width: 20px; height: 20px; float:left; position: relative; left: -5px; bottom: 12px; display: block;
-    background-image: url(../images/ui/shuffle.webp);
+    background-image: url(../images/ui/shuffle_dark.webp);
     background-size: 20px 20px;
 }
 
 .shuffle:hover {
-    background-image: url(../images/ui/shuffle2.webp);
+    background-image: url(../images/ui/shuffle2_dark.webp);
     cursor: url('../images/ui/pinkpointer.png'), pointer;
 }
 

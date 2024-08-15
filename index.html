@@ -50,8 +50,15 @@
                 <td class="middletd">
                     <div class="container">
                         <h2 class="h2-box" style="margin-top: 0px;"><img src="./images/ui/h2char.gif" style="width: 18px;"> Welcome <img src="./images/ui/h2char.gif" style="width: 18px;"></h2>
-                        <p>Hello and welcome to my website! I'm <i>auki19</i>. This is where I like to agglomerate my various projects and hobbies into one big congealed & lovely mess. I'm mostly gonna use this to catalogue my interests. I wasn't old enough to be on the internet back in its early days, but I've grown to <b>love</b> the creativity that comes with custom websites. If you know me irl no you don't.</p>
-                        <marquee scrolldelay="225">
+                        <p>Hello and welcome to my website! I'm <i>auki19</i>. This is where I like to agglomerate my various projects and hobbies into one big congealed & lovely mess. I'm mostly gonna use this to catalogue my interests. I wasn't old enough to be on the internet back in its early days, but I've grown to <b>love</b> the creativity that comes with custom websites. If you know me irl no you don't.</p> 
+                        <p id="a1" style="display: none;">
+                            I'm a believer in the idea that the internet should return to its pre-corporatized pre-social-media state. I find it incredibly ironic as well as scary how many supposed leftists online seem to conflate transparently-predatory-mental-illness-inducer-apps-run-by-fascistic-megacorporations-that-have-your-worst-interests-in-mind with "free speech". Progressive ideology has survived and will continue to survive without algorithms and faux-intellectual astroturfed brainslop breathing down the neck of valid discourse.
+                        </p>
+                        <p id="a2" style="display: none;">
+                            I don't believe that social media as a concept is ontologically evil, but that it's never been executed in a way that's been anything but predatory (capitalism blah blah blah you get it). The worst offenders in my opinion have been short-form content social media apps like tiktok or instagram. The shorter and punchier social media content is, the less and less you're engaging with any individual person's actual ideas and the more and more you're engaging with an algorithm created to exploit you. Most leftists are on the same page about the dangerous right-wing radicalization social media has a huge hand in, but many seem to think that as the side with the <b>Good Ideas&#8482;</b> we're immune to the same kind of well-poisoning.
+                        </p>
+                        <button class="button-link" onclick="readMore()" id="readMore">Read more</button>
+                        <marquee scrolldelay="700">
                             <img class="blinkie" src="./images/badges/blinkies/d1.webp">
                         <img class="blinkie" src="./images/badges/blinkies/d2.webp">
                         <img class="blinkie" src="./images/badges/blinkies/d3.webp">
@@ -85,6 +92,25 @@
                                 <div class="container">
                                     <h2 class="h2-ol" style="margin-top: 0px;">Changelog</h2>
                                     <div class="container-inner" style="height: 250px;">
+                                        <hr>
+                                        <p style="margin-bottom: 0px;">
+                                            <b>8.14.24</b> <br>
+                                        </p>
+                                        <ul style="margin: 0px; padding-left: 10px;">
+                                            <li>Added some albums to music page</li>
+                                            <li>A little polishing</li>
+                                        </ul>
+                                        <hr>
+                                        <p style="margin-bottom: 0px;">
+                                            <b>8.1.24</b> <br>
+                                        </p>
+                                        <ul style="margin: 0px; padding-left: 10px;">
+                                            <li>Separated music page into an albums page and a songs page (songs page still WIP)</li>
+                                            <li>Added links to bandcamp on album covers</li>
+                                            <li>Updated welcome blurb</li>
+                                            <li>Dark mode bugfixes</li>
+                                            <li>Hopefully made light mode a little more readable</li>
+                                        </ul>
                                         <hr>
                                         <p style="margin-bottom: 0px;">
                                             <b>7.29.24</b> <br>
@@ -170,7 +196,8 @@
             '"Nothing\'s gonna change my world"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Across the Universe</b><br>The Beatles</b></p>',
             '"Non sum qualis eram"<br> <p style="text-align: right; margin-bottom: 0px;"><b><b style="color: rgb(58, 58, 238);">House</b> of Leaves</b><br>Mark Z. Danielewski</p>',
             '"Nothing looks that real to me<br>I only see in two or three colors"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Randy</b><br>Big Thief</p>',
-            '"What\'s it like to breathe in?<br>Find a friend and gather within<br>I am a wolf in a city of women<br>You only know the light is on"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Randy</b><br>Big Thief</p>'];
+            '"What\'s it like to breathe in?<br>Find a friend and gather within<br>I am a wolf in a city of women<br>You only know the light is on"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Randy</b><br>Big Thief</p>',
+            '"I can hardly afford a second summer of splinters"<br> <p style="text-align: right; margin-bottom: 0px;"><b>Concorde</b><br>Black Country, New Road</p>',];
             var i = Math.floor(Math.random() * quotes.length);
             document.getElementById("lyric").innerHTML = quotes[i];
 
@@ -220,6 +247,18 @@
                 theme.setAttribute('href', x);
             }
 
+            function readMore () {
+                if (document.getElementById('a1').style.display == "none") {
+                    document.getElementById('a1').style.display = "block";
+                    document.getElementById('a2').style.display = "block";
+                    document.getElementById('readMore').innerHTML = "Read less";
+                } else {
+                    document.getElementById('a1').style.display = "none";
+                    document.getElementById('a2').style.display = "none";
+                    document.getElementById('readMore').innerHTML = "Read more";
+                }
+                
+            }
         </script>
   </body>
 </html>

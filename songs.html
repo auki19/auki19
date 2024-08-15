@@ -1,0 +1,185 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+        <style>
+        
+        </style>
+    </head>
+    <body>
+
+
+        <table class="main">
+            <tr>
+                <td class="lefttd" style="width:150px;">
+                    <div class="container">
+                        <h2 class="h2-ul" style="margin-top: 0px;">Navigation</h2>
+                        <a href="index.html">&#8226;&nbsp;&nbsp;Home</a> <br>
+                        <a href="about.html">&#8226;&nbsp;&nbsp;About</a> <br>
+                        <a href="music.html">&#8226;&nbsp;&nbsp;Music</a> <br>
+                        <a href="books.html">&#8226;&nbsp;&nbsp;Books</a> <br>
+                        <a href="other.html">&#8226;&nbsp;&nbsp;Other</a> <br>
+                        <a href="blog.html">&#8226;&nbsp;&nbsp;Blog</a>
+                    </div>
+                    <div class="container">
+                        <img style="width: 100%;" src="./images/badges/under_construction.gif">
+                    </div>
+                    <button style="padding: 6px; margin-bottom: 0px;" onclick="changeBg()">
+                        Change Background
+                    </button>
+                    <button style="padding: 6px;" onclick="toggleTheme()">
+                        Toggle Dark Mode
+                    </button>
+                </td>
+                <td class="spacetd"></td>
+                <td class="middletd">
+                    <div class="nohover">
+                        <h2 class="h2-box">My Songs Catalogue</h2>
+                        <p>Click on a table header to sort by that category.</p>
+                        <table class="musictable" id="myTable2">
+                            <tr>
+                                <td class="tableheader">Art</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(1)">Song</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(2)">Artist</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(3)">Album</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(4)">Rating</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(5)">Thoughts</td>
+                            </tr>
+                            <tr id="">
+                                <td width="60px"><img src=""></td>
+                                <td style="vertical-align: middle;"></td>
+                                <td></td>
+                                <td></td>
+                                <td id="08.5"></td>
+                                <td style="text-align: justify; width: 500px;">
+                                    <details>
+                                        <summary></summary>
+                                        
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    
+                </td>
+
+            </tr>
+        </table>
+
+        <script>
+
+            function sortTable(n) {
+              var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+              table = document.getElementById("myTable2");
+              switching = true;
+              // Set the sorting direction to ascending:
+              dir = "asc";
+              /* Make a loop that will continue until
+              no switching has been done: */
+              while (switching) {
+                // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /* Loop through all table rows (except the
+                first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                  // Start by saying there should be no switching:
+                  shouldSwitch = false;
+                  /* Get the two elements you want to compare,
+                  one from current row and one from the next: */
+                  x = rows[i].getElementsByTagName("TD")[n];
+                  y = rows[i + 1].getElementsByTagName("TD")[n];
+                  /* Check if the two rows should switch place,
+                  based on the direction, asc or desc: */
+                  if (dir == "asc") {
+                    if (n == 4) {
+                        if (x.id > y.id) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                  } else if (dir == "desc") {
+                    if (n == 4) {
+                        if (x.id < y.id) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                  }
+                }
+                if (shouldSwitch) {
+                  /* If a switch has been marked, make the switch
+                  and mark that a switch has been done: */
+                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                  switching = true;
+                  // Each time a switch is done, increase this count by 1:
+                  switchcount ++;
+                } else {
+                  /* If no switching has been done AND the direction is "asc",
+                  set the direction to "desc" and run the while loop again. */
+                  if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                  }
+                }
+              }
+            }
+
+            const bgUrls = ['url(./images/photos/IMG_0011.JPEG)', 'url(./images/photos/IMG_0242.JPEG)', 'url(./images/photos/IMG_3113.JPEG)', 'url(./images/photos/IMG_3123.JPEG)'];
+            var k;
+            if (localStorage.getItem("k") === null) {
+                k = 0;
+            } else {
+                k = Number(localStorage.getItem("k"));
+            }
+            document.body.style.backgroundImage = bgUrls[localStorage.getItem("k")];
+            function changeBg () {
+                if (k + 1 < bgUrls.length) {
+                    k++;
+                } else {
+                    k = 0;
+                }
+                document.body.style.backgroundImage = bgUrls[k];
+                localStorage.setItem("k", JSON.stringify(k));
+            }
+
+            if (window.localStorage.getItem('theme') == 'dark') {
+                setTheme('./css/dark.css');
+            } else {
+                setTheme('./css/style.css');
+            }
+
+            function toggleTheme() {
+                if (window.localStorage.getItem('theme') == 'default') {
+                    setTheme('./css/dark.css');
+                    window.localStorage.setItem('theme', 'dark');
+                } else {
+                    setTheme('./css/style.css');
+                    window.localStorage.setItem('theme', 'default');
+                }
+            }
+
+            function setTheme(x) {
+                var get = document.getElementById('logo');
+                var theme = document.getElementsByTagName('link')[0];
+                theme.setAttribute('href', x);
+            }
+        </script>
+  </body>
+</html>

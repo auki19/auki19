@@ -1,0 +1,687 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+        <style>
+        
+        </style>
+    </head>
+    <body>
+
+
+        <table class="main">
+            <tr>
+                <td class="lefttd" style="width:150px;">
+                    <div class="container">
+                        <h2 class="h2-ul" style="margin-top: 0px;">Navigation</h2>
+                        <a href="index.html">&#8226;&nbsp;&nbsp;Home</a> <br>
+                        <a href="about.html">&#8226;&nbsp;&nbsp;About</a> <br>
+                        <a href="music.html">&#8226;&nbsp;&nbsp;Music</a> <br>
+                        <a href="books.html">&#8226;&nbsp;&nbsp;Books</a> <br>
+                        <a href="other.html">&#8226;&nbsp;&nbsp;Other</a> <br>
+                        <a href="blog.html">&#8226;&nbsp;&nbsp;Blog</a>
+                    </div>
+                    <div class="container">
+                        <img style="width: 100%;" src="./images/badges/under_construction.gif">
+                    </div>
+                    <button style="padding: 6px; margin-bottom: 0px;" onclick="changeBg()">
+                        Change Background
+                    </button>
+                    <button style="padding: 6px;" onclick="toggleTheme()">
+                        Toggle Dark Mode
+                    </button>
+                </td>
+                <td class="spacetd"></td>
+                <td class="middletd">
+                    <div class="nohover">
+                        <h2 class="h2-box">My Album Catalogue</h2>
+                        <p>Click on a table header to sort by that category. Keep in mind I'm not a music critic by any means, I just like talking about things I enjoy.</p>
+                        <table class="musictable" id="myTable2">
+                            <tr>
+                                <td class="tableheader">Art</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(1)">Album</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(2)">Artist</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(3)">Year</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(4)">Rating</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(5)">Thoughts</td>
+                                <td class="tableheader hoverpoint" onclick="sortTable(6)">Owned on</td>
+                            </tr>
+                            <tr id="tidal">
+                                <td width="60px"><img src="./images/albums/tidal.png"></td>
+                                <td style="vertical-align: middle;">Tidal</td>
+                                <td>Fiona Apple</td>
+                                <td>1996</td>
+                                <td id="08.5">8.5/10</td>
+                                <td style="text-align: justify; width: 500px;">
+                                    <details>
+                                        <summary></summary>
+                                        An astounding debut album from one of the greatest artists of all time IMO. It's unbelievable to me that she released such a classic at only 18 years old, already having mastered songwriting with a level of depth and maturity that most don't reach at all within their lifetimes. <br> <b>Favorite Tracks:</b> Shadowboxer, Slow Like Honey, The Child Is Gone
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="whenthepawn">
+                                <td width="60px"><img src="./images/albums/whenthepawn.jpg"></td>
+                                <td style="vertical-align: middle;">When The Pawn...</td>
+                                <td>Fiona Apple</td>
+                                <td>1999</td>
+                                <td id="10.0">10/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        One of my favorites of all time for sure. Every song on this album hits so incredibly hard one way or another. Fiona's songwriting, vocals, and piano playing are all flawless as always, and Jon Brion's theatrical production elevates it to a legendary album that I constantly find myself coming back to. <br><b>Favorite Tracks:</b> All of them
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="extraordinarymachine">
+                                <td width="60px"><img src="./images/albums/extraordinarymachine.jpg"></td>
+                                <td style="vertical-align: middle;">Extraordinary Machine</td>
+                                <td>Fiona Apple</td>
+                                <td>2005</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        A very solid and extraordinarily fun album. Not much to say about it. The individual tracks are all awesome on their own, but looking at the album as a whole it feels a little bit lacking in comparison with her previous album, hence the docking of a couple points. <br><b>Favorite Tracks:</b> Extraordinary Machine, Get Him Back, Better Version of Me, Tymps, Oh Well, Not About Love, Waltz (Better Than Fine)
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="theidlerwheel">
+                                <td width="60px"><img src="./images/albums/theidlerwheel.jpg"></td>
+                                <td style="vertical-align: middle;">The Idler Wheel...</td>
+                                <td>Fiona Apple</td>
+                                <td>2012</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        This album marks a shift in Fiona's discography from bold heavy-hitting theatrics to more stripped-back and percussive tracks with a much larger focus on songwriting. The lack of theatrical production does nothing to impact the intensity conveyed by the album (although I do miss the fun of it somewhat!)--her songwriting and vocal performances have evolved to the point that she simply doesn't need it anymore.<br><b>Favorite Tracks:</b> Every Single Night, Daredevil, Jonathan, Left Alone, Anything We Want, Hot Knife, Largo
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="fetchtheboltcutters">
+                                <td width="60px"><img src="./images/albums/fetchtheboltcutters.jpg"></td>
+                                <td style="vertical-align: middle;">Fetch The Bolt Cutters</td>
+                                <td>Fiona Apple</td>
+                                <td>2020</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        A wonderfully experimental album that builds off the direction Fiona went in with The Idler Wheel. Many of the songs on this album don't feature piano at all, unlike her previous albums, but rather focus on unconventional percussion and vocals. It took a bit to get used to, but it really grew on me and I'd consider it one of Fiona's best. <br><b>Favorite Tracks:</b> I Want You To Love Me, Shameika, Relay, Rack of His, Newspaper, Ladies, Cosmonauts, On I Go
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="masterpiece">
+                                <td width="60px"><a href="https://bigthief.bandcamp.com/album/masterpiece-2023-remaster-24-bit" target="_blank"><img src="./images/albums/masterpiece.jpg"></a></td>
+                                <td style="vertical-align: middle;">Masterpiece</td>
+                                <td>Big Thief</td>
+                                <td>2016</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        A strong debut indie rock album. Adrianne's beautiful songwriting and knack for catchy melodies make Masterpiece a great listen. "Vegas" is boring to me, and "Interstate" & "Parallels" feel a bit underdeveloped, but otherwise it's a very enjoyable album. <br><b>Favorite Tracks:</b> Masterpiece, Real Love, Paul, Humans, Randy
+                                    </details>
+                                </td>
+                                    
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="capacity">
+                                <td width="60px"><a href="https://bigthief.bandcamp.com/album/capacity-1" target="_blank"><img src="./images/albums/capacity.jpg"></a></td>
+                                <td style="vertical-align: middle;">Capacity</td>
+                                <td>Big Thief</td>
+                                <td>2017</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        A very good follow-up to their debut. The instrumentals are much less heavy on this one, with more ethereal vocals set over smooth guitar tones and relaxed percussion. I still find a few tracks like "Coma" and "Black Diamonds" a little underdeveloped, but it's overall a very pretty-sounding album that clicks together with Adrianne's songwriting nicely. <br><b>Favorite Tracks:</b> Shark Smile, Watering, Great White Shark, Objects, Haley
+                                    </details>
+                                </td> 
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="ufof">
+                                <td width="60px"><a href="https://bigthief.bandcamp.com/album/u-f-o-f" target="_blank"><img src="./images/albums/ufof.jpg"></a></td>
+                                <td style="vertical-align: middle;">U.F.O.F.</td>
+                                <td>Big Thief</td>
+                                <td>2019</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        A beautifully produced indie folk album with light vocals and celestial guitar instrumentation. Adrianne's songwriting takes a more abstract direction, with beautiful and oftentimes harrowingly evocative imagery. The track "Jenni" is somewhat repetitive and doesn't fit very well on the album, but everything else about it is magical. <br><b>Favorite Tracks:</b> UFOF, Cattails, Open Desert, Orange, Century, Magic Dealer
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="twohands">
+                                <td width="60px"><a href="https://bigthief.bandcamp.com/album/two-hands" target="_blank"><img src="./images/albums/twohands.png"></a></td>
+                                <td style="vertical-align: middle;">Two Hands</td>
+                                <td>Big Thief</td>
+                                <td>2019</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        A more grounded and acoustic sister album to <a href="#ufof">UFOF</a>. I was initially put off by the sort-of unconventional vocals and production of "The Toy", "Those Girls", and "Cut My Hair", but I grew to enjoy it. The album as a whole is a very nice listen. <br><b>Favorite Tracks:</b> Forgotten Eyes, Two Hands, Shoulders, Not, Replaced
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="dragonnewwarmmountain">
+                                <td width="60px"><a href="https://bigthief.bandcamp.com/album/dragon-new-warm-mountain-i-believe-in-you" target="_blank"><img src="./images/albums/dragonnewwarmmountain.png"></a></td>
+                                <td style="vertical-align: middle;">Dragon New Warm Mountain I Believe In You</td>
+                                <td>Big Thief</td>
+                                <td>2022</td>
+                                <td id="10.0">10/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>My favorite folk album ever. Big Thief draws influences from country, bluegrass, Americana, and even trip-hop, trap, shoegaze, and psychadelic music throughout this sprawling 20-track album alongside some of the most beautifully human songwriting I've ever had the pleasure of experiencing. Adrianne's airy and playful vocals carry you through the tracklist so entrancingly. It's silly, heartbreaking, ethereal, intimate, strange, and filled to the brim with pure joy. <br><b>Favorite Tracks:</b> Time Escaping, Spud Infinity, Certainty, Dragon New Warm Mountain I Believe In You, Sparrow, Blurred View, Red Moon, No Reason, Simulation Swarm, Love Love Love, Blue Lightning
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="hourswerethebirds">
+                                <td width="60px"><a href="https://adriannelenker.bandcamp.com/album/hours-were-the-birds" target="_blank"><img src="./images/albums/hourswerethebirds.jpg"></a></td>
+                                <td style="vertical-align: middle;">Hours Were the Birds</td>
+                                <td>Adrianne Lenker</td>
+                                <td>2014</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="asides">
+                                <td width="60px"><a href="https://adriannelenker.bandcamp.com/album/a-sides" target="_blank"><img src="./images/albums/asides.webp"></a></td>
+                                <td style="vertical-align: middle;">a-sides and besides</td>
+                                <td>Adrianne Lenker</td>
+                                <td>2014</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="abysskiss">
+                                <td width="60px"><a href="https://adriannelenker.bandcamp.com/album/abysskiss" target="_blank"><img src="./images/albums/abysskiss.webp"></a></td>
+                                <td style="vertical-align: middle;">abysskiss</td>
+                                <td>Adrianne Lenker</td>
+                                <td>2018</td>
+                                <td id="06.0">6/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        i'm conflicted about this one. adrianne's songwriting is nice, but the album as a whole feels more like a very-polished collection of demos than a set of complete songs. i might have to give it a few more tries. <br><b>favorite tracks:</b> cradle, symbol, blue and red horses
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="songs">
+                                <td width="60px"><a href="https://adriannelenker.bandcamp.com/album/songs" target="_blank"><img src="./images/albums/songs.webp"></a></td>
+                                <td style="vertical-align: middle;">songs</td>
+                                <td>Adrianne Lenker</td>
+                                <td>2020</td>
+                                <td id="09.5">9.5/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        mwah mwah mwah beautiful. i don't really know what to say about this album other than that it feels both completely otherworldly/angelic and incredibly intimate/familiar. the lyrics and instrumentation are so evocative in a way i can't put into words. <br><b>favorite tracks:</b> two reverse, ingydar, anything, forwards beckon rebound, heavy focus, dragon eyes
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="iwontletgo">
+                                <td width="60px"><a href="https://adriannelenker.bandcamp.com/album/i-won-t-let-go-of-your-hand" target="_blank"><img src="./images/albums/iwontletgo.jpeg"></a></td>
+                                <td style="vertical-align: middle;">i won't let go of your hand</td>
+                                <td>Adrianne Lenker</td>
+                                <td>2024</td>
+                                <td id="07.5">7.5/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        a beautiful set of voice-memo demos. this album is only available thru <a href="https://adriannelenker.bandcamp.com/album/i-won-t-let-go-of-your-hand">purchase on Bandcamp</a>, and the proceeds go to the PCRF so I really encourage buying it. <br><b>favorite tracks:</b> the music, fangs lungs ankles, i won't let go of your hand, someone to
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="brightfuture">
+                                <td width="60px"><a href="https://adriannelenker.bandcamp.com/album/bright-future" target="_blank"><img src="./images/albums/brightfuture.webp"></a></td>
+                                <td style="vertical-align: middle;">Bright Future</td>
+                                <td>Adrianne Lenker</td>
+                                <td>2024</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        Adrianne is a legendary songwriter and lyricist, and this album makes that abundantly clear. While her previous studio album <a href="#songs">songs</a> was much more atmospheric and abstract, Bright Future is direct and soul-baring in its lyrics. I personally prefer the previous album's style, but Bright Future is still a wonderful set of songs. <br><b>Favorite Tracks:</b> Sadness as a Gift, Fool, Free Treasure (the most beautiful love song I've ever heard), Evol, Already Lost, Donut Seam, Once a Bunch
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            
+                            <tr id="tfgba">
+                                <td width="60px"><a href="https://glassbeach.bandcamp.com/album/the-first-glass-beach-album" target="_blank"><img src="./images/albums/tfgba.jpg"></a></td>
+                                <td style="vertical-align: middle;">the first glass beach album</td>
+                                <td>glass beach</td>
+                                <td>2019</td>
+                                <td id="07.5">7.5/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>a bit inconsistent at times, but very ambitious and fun. if jeff rosenstock was a gay indietronica artist basically<br><b>favorite tracks:</b> classic j dies and goes to hell part 1, bedroom community, bone skull, glass beach, yoshi's island, orchids
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="plasticdeath">
+                                <td width="60px"><a href="https://glassbeach.bandcamp.com/album/plastic-death" target="_blank"><img src="./images/albums/plasticdeath.jpg"></a></td>
+                                <td style="vertical-align: middle;">plastic death</td>
+                                <td>glass beach</td>
+                                <td>2024</td>
+                                <td id="08.5">8.5/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="lush">
+                                <td width="60px"><a href="https://mitski.bandcamp.com/album/lush" target="_blank"><img src="./images/albums/lush.jpg"></a></td>
+                                <td style="vertical-align: middle;">LUSH</td>
+                                <td>Mitski</td>
+                                <td>2012</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="rfsncib">
+                                <td width="60px"><a href="https://mitski.bandcamp.com/album/retired-from-sad-new-career-in-business" target="_blank"><img src="./images/albums/rfsncib.jpg"></a></td>
+                                <td style="vertical-align: middle;">Retired from Sad, New Career in Business</td>
+                                <td>Mitski</td>
+                                <td>2013</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="burymeatmakeoutcreek">
+                                <td width="60px"><a href="https://mitski.bandcamp.com/album/bury-me-at-makeout-creek" target="_blank"><img src="./images/albums/burymeatmakeoutcreek.jpg"></a></td>
+                                <td style="vertical-align: middle;">Bury Me At Makeout Creek</td>
+                                <td>Mitski</td>
+                                <td>2014</td>
+                                <td id="08.5">8.5/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="puberty2">
+                                <td width="60px"><a href="https://mitski.bandcamp.com/album/puberty-2" target="_blank"><img src="./images/albums/puberty2.jpg"></a></td>
+                                <td style="vertical-align: middle;">Puberty 2</td>
+                                <td>Mitski</td>
+                                <td>2016</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="bethecowboy">
+                                <td width="60px"><a href="https://mitski.bandcamp.com/album/be-the-cowboy" target="_blank"><img src="./images/albums/bethecowboy.jpg"></a></td>
+                                <td style="vertical-align: middle;">Be The Cowboy</td>
+                                <td>Mitski</td>
+                                <td>2018</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="laurelhell">
+                                <td width="60px"><a href="https://mitski.bandcamp.com/album/laurel-hell" target="_blank"><img src="./images/albums/laurelhell.png"></a></td>
+                                <td style="vertical-align: middle;">Laurel Hell</td>
+                                <td>Mitski</td>
+                                <td>2022</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="theland">
+                                <td width="60px"><a href="https://mitski.bandcamp.com/album/the-land-is-inhospitable-and-so-are-we" target="_blank"><img src="./images/albums/theland.jpg"></a></td>
+                                <td style="vertical-align: middle;">The Land Is Inhospitable and So Are We</td>
+                                <td>Mitski</td>
+                                <td>2023</td>
+                                <td id="08.5">8.5/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="diamondjubilee">
+                                <td width="60px"><a href="https://www.youtube.com/watch?v=_LJi5na897Y" target="_blank"><img src="./images/albums/diamondjubilee.webp"></a></td>
+                                <td style="vertical-align: middle;">Diamond Jubilee</td>
+                                <td>Cindy Lee</td>
+                                <td>2024</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="eial">
+                                <td width="60px"><a href="https://willwoodmusic.bandcamp.com/album/everything-is-a-lot-2020-remaster" target="_blank"><img src="./images/albums/eial.jpg"></a></td>
+                                <td style="vertical-align: middle;">Everything Is A Lot</td>
+                                <td>Will Wood And The Tapeworms</td>
+                                <td>2015</td>
+                                <td id="07.5">7.5/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        Will is genuinely an incredible lyricist and piano player and I think that shines through the most in this album, with it's generally-more-stripped-back approach in comparison with his others. In my opinion Will doesn't do theatricality as well as other comparable artists (BCNR, Fiona Apple, Tom Waits, etc) because he leans too much into a pop direction with his songwriting. His more mellow singer-songwriter piano driven tracks here are so beautifully done, and I wish that was the direction he took moving out of his debut. Some of the theatrical ones are still very fun though. <br><b>Favorite Tracks:</b> 6up 5oh Cop-Out; Skeleton Appreciation Day; Aikido (Neurotic / Erotic); White Knuckle Jerk; Red Moon; Lysergide Daydream; Jimmy Mushrooms' Last Drink
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="SELF-iSH">
+                                <td width="60px"><a href="https://willwoodmusic.bandcamp.com/album/self-ish-2020-remaster" target="_blank"><img src="./images/albums/self-ish.jpg"></a></td>
+                                <td style="vertical-align: middle;">SELF-iSH</td>
+                                <td>Will Wood And The Tapeworms</td>
+                                <td>2016</td>
+                                <td id="06.5">6.5/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="tna">
+                                <td width="60px"><a href="https://willwoodmusic.bandcamp.com/album/the-normal-album" target="_blank"><img src="./images/albums/tna.jpg"></a></td>
+                                <td style="vertical-align: middle;">The Normal Album</td>
+                                <td>Will Wood</td>
+                                <td>2020</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="icimi">
+                                <td width="60px"><a href="https://willwoodmusic.bandcamp.com/album/in-case-i-make-it" target="_blank"><img src="./images/albums/icimi.jpg"></a></td>
+                                <td style="vertical-align: middle;">"In case I make it,"</td>
+                                <td>Will Wood</td>
+                                <td>2022</td>
+                                <td id="07.0">7/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        I've always loved Will's more mellow songs, and this album has some of his best. But there are a few too many tracks that feel like filler (BFB's, You Liked This) or just self-indulgently ironic/insincere (Sex, Drugs, Rock 'n' Roll; The Main Character (as much as I like the song)) to rank it as high as <a href="#eial">EIAL</a>.<br><b>Favorite Tracks:</b> Tomcat Disposables; Euthanasia; Falling Up; That's Enough, Let's Get You Home; Um, It's Kind Of A Lot; Against The Kitchen Floor
+                                    </details>
+                                </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="forthefirsttime">
+                                <td width="60px"><a href="https://blackcountrynewroad.bandcamp.com/album/for-the-first-time" target="_blank"><img src="./images/albums/forthefirsttime.webp"></a></td>
+                                <td style="vertical-align: middle;">For the first time</td>
+                                <td>Black Country, New Road</td>
+                                <td>2021</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        An endlessly inventive and unique post-punk album. Isaac Wood's vocal delivery is <i>sooo</i> fucking good, and the instrumentals create such a tense atmosphere at times that the releases hit harder than probably anything from any other album I've ever heard before. At its high points this album has some of my favorite songs of all time. I'd love to give it a higher score, but I find "Instrumental" a tiny bit repetitive and "Track X" relatively bland, and with only 6 tracks on the album that makes up a decent fraction of its runtime. <br><b>Favorite Tracks:</b> Sunglasses, Opus
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="antsfromupthere">
+                                <td width="60px"><a href="https://blackcountrynewroad.bandcamp.com/album/ants-from-up-there" target="_blank"><img src="./images/albums/antsfromupthere.webp"></a></td>
+                                <td style="vertical-align: middle;">Ants From Up There</td>
+                                <td>Black Country, New Road</td>
+                                <td>2022</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;">
+                                    
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="liveatbushhall">
+                                <td width="60px"><a href="https://blackcountrynewroad.bandcamp.com/album/live-at-bush-hall" target="_blank"><img src="./images/albums/liveatbushhall.jpg"></a></td>
+                                <td style="vertical-align: middle;">Live At Bush Hall</td>
+                                <td>Black Country, New Road</td>
+                                <td>2023</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="okcomputer">
+                                <td width="60px"><a href="https://radiohead.bandcamp.com/album/ok-computer" target="_blank"><img src="./images/albums/okcomputer.png"></a></td>
+                                <td style="vertical-align: middle;">OK Computer</td>
+                                <td>Radiohead</td>
+                                <td>1997</td>
+                                <td id="10.0">10/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        What hasn't already been said about this album? If you've never listened to it before do that. Probably everyone should. <br><b>Favorite Tracks:</b> Airbag, Paranoid Android, Subterranean Homesick Alien, Let Down, Electioneering, No Surprises
+                                    </details>
+                                    </td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="inrainbows">
+                                <td width="60px"><a href="https://radiohead.bandcamp.com/album/in-rainbows" target="_blank"><img src="./images/albums/Inrainbows.png"></a></td>
+                                <td style="vertical-align: middle;">In Rainbows</td>
+                                <td>Radiohead</td>
+                                <td>2007</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="magnolia">
+                                <td width="60px"><a href="https://songsohia.bandcamp.com/album/magnolia-electric-co-deluxe-edition" target="_blank"><img src="./images/albums/magnolia.jpeg"></a></td>
+                                <td style="vertical-align: middle;">Magnolia Electric Co.</td>
+                                <td>Songs: Ohia</td>
+                                <td>2003</td>
+                                <td id="09.5">9.5/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        An almost-perfect country album. Jason Molina's voice is so expressive and unique and it matches the really solid feel to the instrumentals. It feels so heavy yet restrained in a way that perfectly reflects Molina's hard-hitting wistful lyricism. Everything from the production to the writing feels decades ahead of its time. I do find the Peoria Lunch Box Blues singer's voice a <i>little</i> annoying, and the song feels a <i>little</i> unnecessary in the context of the rest of the album, but I still enjoy it. <br><b>Favorite Tracks:</b> Farewell Transmission, I've Been Riding With the Ghost, The Old Black Hen, John Henry Split My Heart, Hold On Magnolia, Whip-Poor-Will
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="aeroplane">
+                                <td width="60px"><a href="https://neutralmilkhotel.bandcamp.com/album/in-the-aeroplane-over-the-sea" target="_blank"><img src="./images/albums/aeroplane.jpeg"></a></td>
+                                <td style="vertical-align: middle;">In the Aeroplane Over the Sea</td>
+                                <td>Neutral Milk Hotel</td>
+                                <td>1998</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="twicearoundthesun">
+                                <td width="60px"><a href="https://weareugly.bandcamp.com/album/twice-around-the-sun-ep" target="_blank"><img src="./images/albums/twicearoundthesun.jpeg"></a></td>
+                                <td style="vertical-align: middle;">Twice Around the Sun</td>
+                                <td>Ugly</td>
+                                <td>2024</td>
+                                <td id="07.5">7.5/10</td>
+                                <td style="text-align: justify;">
+                                    <details>
+                                        <summary></summary>
+                                        I'm amazed this band isn't more popular than they are. I understand why maybe some of their more proggy experimental stuff may not get much mainstream appeal, but "Sha" off this album is one of the best pop songs I've heard in my life. I don't really know what to say about this album other than that it's a super captivating experience that I really recommend. I only give it a 7.5 because I just personally dislike the closing track "I'm Happy You're Here" and it takes up almost a fourth of the runtime. Every other track on this thing is soooo good. <br><b>Favorite Tracks:</b> The Wheel, Sha, Icy Windy Sky, Shepherd's Carol
+                                    </details>
+                                </td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="helplessness">
+                                <td width="60px"><a href="https://fleetfoxes.bandcamp.com/album/helplessness-blues" target="_blank"><img src="./images/albums/helplessness.jpg"></a></td>
+                                <td style="vertical-align: middle;">Helplessness Blues</td>
+                                <td>Fleet Foxes</td>
+                                <td>2011</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Vinyl</td>
+                            </tr>
+                            <tr id="hotellarut">
+                                <td width="60px"><img src="./images/albums/hotellarut.jpg"></td>
+                                <td style="vertical-align: middle;">Hotel La Rut</td>
+                                <td>Joanna Wang</td>
+                                <td>2024</td>
+                                <td id="07.5">7.5/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="blue">
+                                <td width="60px"><img src="./images/albums/blue.jpg"></td>
+                                <td style="vertical-align: middle;">Blue</td>
+                                <td>Joni Mitchell</td>
+                                <td>1975</td>
+                                <td id="08.0">8/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="hejira">
+                                <td width="60px"><img src="./images/albums/hejira.jpg"></td>
+                                <td style="vertical-align: middle;">Hejira</td>
+                                <td>Joni Mitchell</td>
+                                <td>1976</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="twinfantasy">
+                                <td width="60px"><a href="https://carseatheadrest.bandcamp.com/album/twin-fantasy-2" target="_blank"><img src="./images/albums/twinfantasy.jpg"></a></td>
+                                <td style="vertical-align: middle;">Twin Fantasy (Face to Face)</td>
+                                <td>Car Seat Headrest</td>
+                                <td>2018</td>
+                                <td id="09.0">9/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="grace">
+                                <td width="60px"><img src="./images/albums/grace.jpg"></td>
+                                <td style="vertical-align: middle;">Grace</td>
+                                <td>Jeff Buckley</td>
+                                <td>1994</td>
+                                <td id="--.0">--/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>Digital</td>
+                            </tr>
+                            <tr id="spiderland">
+                                <td width="60px"><a href="https://slint.bandcamp.com/album/spiderland" target="_blank"><img src="./images/albums/spiderland.jpg"></a></td>
+                                <td style="vertical-align: middle;">Spiderland</td>
+                                <td>Slint</td>
+                                <td>1991</td>
+                                <td id="--.0">--/10</td>
+                                <td style="text-align: justify;"></td>
+                                <td>--</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </td>
+
+            </tr>
+        </table>
+
+        <script>
+            sortTable(3)
+            sortTable(2)
+            sortTable(4)
+            sortTable(4)
+
+            function sortTable(n) {
+              var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+              table = document.getElementById("myTable2");
+              switching = true;
+              // Set the sorting direction to ascending:
+              dir = "asc";
+              /* Make a loop that will continue until
+              no switching has been done: */
+              while (switching) {
+                // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /* Loop through all table rows (except the
+                first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                  // Start by saying there should be no switching:
+                  shouldSwitch = false;
+                  /* Get the two elements you want to compare,
+                  one from current row and one from the next: */
+                  x = rows[i].getElementsByTagName("TD")[n];
+                  y = rows[i + 1].getElementsByTagName("TD")[n];
+                  /* Check if the two rows should switch place,
+                  based on the direction, asc or desc: */
+                  if (dir == "asc") {
+                    if (n == 4) {
+                        if (x.id > y.id) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                  } else if (dir == "desc") {
+                    if (n == 4) {
+                        if (x.id < y.id) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                  }
+                }
+                if (shouldSwitch) {
+                  /* If a switch has been marked, make the switch
+                  and mark that a switch has been done: */
+                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                  switching = true;
+                  // Each time a switch is done, increase this count by 1:
+                  switchcount ++;
+                } else {
+                  /* If no switching has been done AND the direction is "asc",
+                  set the direction to "desc" and run the while loop again. */
+                  if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                  }
+                }
+              }
+            }
+
+            const bgUrls = ['url(./images/photos/IMG_0011.JPEG)', 'url(./images/photos/IMG_0242.JPEG)', 'url(./images/photos/IMG_3113.JPEG)', 'url(./images/photos/IMG_3123.JPEG)'];
+            var k;
+            if (localStorage.getItem("k") === null) {
+                k = 0;
+            } else {
+                k = Number(localStorage.getItem("k"));
+            }
+            document.body.style.backgroundImage = bgUrls[localStorage.getItem("k")];
+            function changeBg () {
+                if (k + 1 < bgUrls.length) {
+                    k++;
+                } else {
+                    k = 0;
+                }
+                document.body.style.backgroundImage = bgUrls[k];
+                localStorage.setItem("k", JSON.stringify(k));
+            }
+
+            if (window.localStorage.getItem('theme') == 'dark') {
+                setTheme('./css/dark.css');
+            } else {
+                setTheme('./css/style.css');
+            }
+
+            function toggleTheme() {
+                if (window.localStorage.getItem('theme') == 'default') {
+                    setTheme('./css/dark.css');
+                    window.localStorage.setItem('theme', 'dark');
+                } else {
+                    setTheme('./css/style.css');
+                    window.localStorage.setItem('theme', 'default');
+                }
+            }
+
+            function setTheme(x) {
+                var get = document.getElementById('logo');
+                var theme = document.getElementsByTagName('link')[0];
+                theme.setAttribute('href', x);
+            }
+        </script>
+  </body>
+</html>
